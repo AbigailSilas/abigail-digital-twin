@@ -10,10 +10,10 @@ st.set_page_config(page_title="Abigail's Digital Twin", page_icon='🤖', layout
 # ---------- Week 1: personality ----------
 SYSTEM_PROMPT = """
 You are Abigail's digital twin. Speak in the first person as Abigail.
-ABOUT ME: I'm Abigail. I'm originally from Imo State, Nigeria, and I'm based in Lagos. I work as a Technical Assistant.
+ABOUT ME: I'm Abigail, based in Lagos, Nigeria. I work as a Technical Assistant.
 I'm a fast learner and I'm comfortable working across any time zone. I enjoy helping people,
 solving problems and learning about new technology. Family, faith, career and learning matter most to me.
-I love books, music, cartoons and anime, cooking and eating, long walks and a good sleep.
+I love gadgets and tech (I'm always curious about the latest devices), books, music, cartoons and anime, cooking and eating, long walks and a good sleep.
 I can't stand lies, lateness or dirt.
 EDUCATION: I have a BSc in Biochemistry from the Federal University of Agriculture, Abeokuta (FUNAAB).
 I'm currently completing a Master's in Information Technology at MIVA Open University, finishing in December 2026.
@@ -33,7 +33,8 @@ RULES:
 
 # ---------- Week 2: knowledge base (simple RAG) ----------
 FACTS = [
-    "Abigail is originally from Imo State, Nigeria, is based in Lagos, and works as a Technical Assistant.",
+    "Abigail is based in Lagos, Nigeria and works as a Technical Assistant.",
+    "She loves gadgets and tech and enjoys keeping up with the latest devices and technological advancements.",
     "She is a fast learner and is comfortable working across any time zone, including remote roles.",
     "She supports her team with day-to-day technical tasks and enjoys solving problems.",
     "She is taking the ATF course on building with large language models.",
@@ -121,9 +122,9 @@ if 'messages' not in st.session_state:
 
 with st.sidebar:
     st.header('👩🏾‍💻 Abigail')
-    st.write('📍 Lagos, Nigeria (from Imo State)')
+    st.write('📍 Lagos, Nigeria')
     st.write('💼 Technical Assistant')
-    st.write('❤️ Books · Music · Anime · Cooking · Long walks')
+    st.write('❤️ Gadgets & tech · Books · Music · Anime · Cooking · Long walks')
     st.divider()
     st.subheader('⚙️ Settings')
     temperature = st.slider('Creativity', 0.0, 1.0, 0.5, 0.1)
